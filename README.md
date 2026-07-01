@@ -135,3 +135,19 @@ This runs:
 4. **Contacts Directory**: Filterable search console with category and favorite selectors.
 5. **Add / Edit Pages**: Clean form layouts with validation checks and quick favorite star buttons.
 6. **Profile Page**: Displays user details and a form to change password settings.
+
+---
+
+## Production & Deployment
+
+The application is optimized for single-service deployment (e.g. on Render, Heroku, or Railway) by serving the frontend React assets statically directly from the Express server.
+
+### Scripts
+* **Build**: `npm run build` — Installs workspace-wide dependencies and compiles the React application to `client/dist`.
+* **Start**: `npm start` — Boots up the Node.js production server.
+
+### Required Environment Variables
+* `NODE_ENV`: `production`
+* `MONGO_URI`: Your MongoDB Atlas Connection URI
+* `JWT_SECRET`: Your secret key for generating JSON Web Tokens
+
