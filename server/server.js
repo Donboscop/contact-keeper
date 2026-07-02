@@ -7,7 +7,7 @@ const { getDashboardStats } = require('./controllers/contactController');
 const { protect } = require('./middleware/authMiddleware');
 
 // Load env variables
-dotenv.config();
+dotenv.config({ path: path.join(__dirname, '.env') });
 
 // Connect Database
 connectDB();
